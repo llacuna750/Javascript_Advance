@@ -1,0 +1,174 @@
+@charset "UTF-8";
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --border-radius: 5px;
+  --font-family: "Arial", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.thisish3 {
+  display: inline;
+}
+
+.q1 {
+  background-color: #2ecc71;
+  border-radius: var(--border-radius);
+}
+
+.choice {
+  display: none;
+}
+
+.q2 {
+  background-color: #3498db;
+  border-radius: var(--border-radius);
+}
+
+.Logout {
+  margin: 5px;
+}
+
+.myh3 {
+  color: rgba(22, 21, 21, 0.87);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.contact-card {
+  color: #070707;
+  padding: 3rem; /* Bootstrap's p-5 = 3rem */
+  margin-block: 1rem; /* Bootstrap's my-3 = 1rem top & bottom */
+  border-radius: 1rem; /* Bootstrap's rounded-4 ≈ 1rem */
+  width: 59%;
+  background-color: rgb(116, 138, 138);
+  font-weight: bolder;
+  font-size: 2em;
+  flex-wrap: wrap;
+  box-shadow: 0 0 3px cyan, 0 0 5px cyan, 0 2px 15px cyan;
+}
+
+.colormyP {
+  color: #be4242;
+  font-weight: normal;
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0;
+}
+
+.divfornoFound {
+  margin: 0;
+  padding: 0;
+}
+.divfornoFound .notFound {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 5px;
+  width: 60%;
+  height: 0;
+  display: inline-block;
+  justify-content: start;
+  align-items: center;
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  gap: 10px 10px;
+}
+
+.item:nth-child(1),
+.item:nth-child(4) {
+  grid-column: 1/3;
+}
+
+.containerRealstate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #95c2c2;
+  border-radius: 5px;
+}
+.containerRealstate .realStateCont {
+  width: 80%;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.containerRealstate .realStateCont p {
+  font-size: medium;
+}
+.containerRealstate .realStateImage {
+  width: 500px;
+  background-color: red;
+  border-radius: 1em;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+.containerRealstate .card-right {
+  border-left: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 10px;
+}
+
+#imageContainer img,
+#catImageContainer1 img,
+#catImageContainer2 img {
+  width: 100%;
+  max-height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#imageContainer,
+#catImageContainer1,
+#catImageContainer2 {
+  padding: 0;
+  margin: 0;
+}
+
+.img-containerImple {
+  display: flex;
+  flex-direction: row; /* row layout */
+  align-items: center; /* vertically center images */
+  justify-content: flex-start; /* align to left */
+  gap: 1rem; /* spacing between images */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto; /* add horizontal scroll if needed */
+}
+
+.img-containerImple img {
+  height: auto;
+  max-height: 150px; /* or your preferred height */
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+
+.d-NoneMe {
+  display: none;
+}/*# sourceMappingURL=jsAdbans.css.map */

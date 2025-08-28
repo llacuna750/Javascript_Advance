@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="jsAdbans.css">
+    <link rel="shortcut icon" href="../images/js-favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="d-grid gap-sm justify-content-md-center">
+        <div class="mydiv p-3">
+            <h1 id="gwapoq">JQuery <span>
+                    <h3 class="thisish3">Vanilla JS</h3>
+                </span></h1>
+        </div>
+
+        <div class="container q1 p-3">
+            <h2>What is the capital of Peru?</h2>
+            <div class="p-2">
+                <h2>Your answer:
+                    <span><b id="myAnswer"></b></span>
+                </h2>
+                <h6 class="result"><b><i></i></b></h6>
+                <p class="canceled"><b></b></p>
+                <p class="countStat"></p>
+                <p class="countMe"></p>
+            </div>
+            <div class="choice">
+                <h6>Timer: <span><b class="seconds"></b></span>
+
+                    <h6><b>Are u sure in your answer?</b>
+                        <span><button id="buttonYes" class="btn-success btn-lg">Yes</button>
+                            <button id="buttonNo" class="btn-warning btn-lg">No</button></span>
+                    </h6>
+            </div>
+        </div>
+
+        <div class=" m-2 container q2 p-2 rounded-2">
+            <button class="btn btn-warning Logout" id="startShutdownMe">Log out</button>
+        </div>
+
+        <div class="jumbotron container bg-primary-text-black p-2">
+            <h1>Name: <span id="name"></span></h1>
+            <h1>Symbol: <span id="Symbol"></span></h1>
+            <h1>Price:
+                <span id="price"></span>
+                <span id="PriceIcon"></span>
+            </h1>
+            <h1>Time: <span id="Time"></span></h1>
+        </div>
+
+        <div class="container bg-danger bg-gradient rounded-2  py-2 pe-lg-5 display-5">
+            <h2 class="text-center text-light">Shopping List📝</h2>
+            <div class="text-sm-center">
+                <div class="d-flex justify-content-center">
+                    <ul id="list" class="list-unstyled">
+                        <!-- list -->
+                        <!-- <li class="w-50 list-unstyled text-black rounded bg-light"></li>  -->
+                    </ul>
+                </div>
+                <form id="shoppingListForm">
+                    <Label for="itemName">
+                        <h3 class="text-body">Item</h3>
+                    </Label>
+                    <input type="text" name="item" id="itemName" class="rounded-2" placeholder="e.g. rice">
+                    <!-- item input -->
+                    <input id="addButton" type="button" value="Add" class="rounded-4"> <!-- Add button -->
+                </form>
+            </div>
+        </div>
+
+        <div class="container-md bg-success m-2 p-2 w-50 rounded-2 d-block mx-auto" id="playlistSong">
+        </div>
+
+        <div class="container-md bg-primary m-2 p-2 w-75 rounded-2 d-block mx-auto">
+            <div class="container-md bg-dark py-5 px-4">
+                <form>
+                    <div class="d-flex justify-content-center">
+                        <div class="p-3">
+                            <label for="pattern-search-input" class="form-label mb-0">
+                                <h4 class="mb-0">Enter contact name:</h4>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <input type="text" name="intpName" class="rounded-end-0 w-50 text-black form-control fw-bolder"
+                            style="border-radius: 5px;" id="pattern-search-input">
+                        <input type="button"
+                            class="bg-primary text-white px-4 py-2 rounded-start-0 border-0 fw-semibold"
+                            style="border-radius: 5px;" value="Search" id="pattern-search-submit">
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center divfornoFound">
+
+                    </div>
+                    <!-- Tansyahon sa nato.. -->
+
+                </form>
+                <div class="d-flex justify-content-center align-content-center">
+                    <div class="border border-2 border-danger mt-4" style="width: 59% "></div>
+                </div>
+                <section class="d-flex flex-column flex-wrap align-items-center contact-display" id="contact-display">
+                    <!-- <div class="p-5 my-3 rounded-4" style="width: 59%; background-color: rgb(116, 138, 138);" >
+                      <h3 class="myh3">John Smith</h3>
+                      <h3 class="myh3">john@gmail.com</h3>
+                      <h3 class="myh3">123-456-7890</h3>
+                    </div>       -->
+                    <!-- tempory-para-matansya               -->
+                </section>
+            </div>
+        </div>
+
+        <div class="container mt-4 border p-2">
+            <div class="row g-4" id="contenerSurprise"> <!-- g-4 gives both horizontal & vertical gap -->
+            </div>
+        </div>
+
+        <div class="container my-3 p-4 containerRealstate" id="containerRealStaet">
+            <!-- <section class="p-0 realStateCont">
+                    <img class="realStateImage" src="/Javascript_Advance/Function Expressions & Parameters/Images/shed.jpg" alt="imagRender">
+                    <div class="card-right">
+                        <h1><b>Kensington, London</b></h1>
+                        <h3><b>£890000</b></h3>
+                        <p>Highly desirable location in stunning scenery!</p>
+                        <h2><b>62 m2</b></h2>
+                    </div>
+                </section>  -->
+        </div>
+
+        <div class="container myCatAPi">
+            <div class="row row-cols-1 row-cols-md-2 g-3">
+                <!-- Dog API -->
+                <div class="col">
+                    <div class="border border-black rounded bg-info p-0">
+                        <h4 class="text-center">
+                            <b>Random image From API: <a href="https://dog.ceo/api/breeds/image/random">https://dog.ceo/api/breeds/image/random</a></b>
+                        </h4>
+                        <div id="imageContainer" class="text-center mt-2"></div>
+                    </div>
+                </div>
+
+                <!-- Cat API 1 -->
+                <div class="col">
+                    <div class="border border-black rounded bg-info p-0">
+                        <h4 class="text-center">
+                            <b>Cat API: <a href="https://api.thecatapi.com/v1/images/search">https://api.thecatapi.com/v1/images/search</a></b>
+                        </h4>
+                        <div id="catImageContainer1" class="text-center mt-2"></div>
+                    </div>
+                </div>
+
+                <!-- Cat API 2 -->
+                <div class="col">
+                    <div class="border border-black rounded bg-info p-0">
+                        <h4 class="text-center">
+                            <b>Cat API: <a href="https://api.thecatapi.com/v1/images/search">https://api.thecatapi.com/v1/images/search</a></b>
+                        </h4>
+                        <div id="catImageContainer2" class="text-center mt-2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 19. Super challenge: Async Image Load -->
+    <div class="container p-3 border-1 border border-black my-2 rounded w-25" id="grandFather-Async-Image-Load">
+        <div class="container" id="img-container">
+            <div class="m-2 d-flex flex-column  justify-content-center align-content-center" id="upload-container">
+                <h5><b>Select Images to Upload</b> </h5>
+
+                <div class="container d-flex flex-column justify-content-center align-items-start">
+                    <div class="w-100 d-flex flex-column justify-content-between gap-2">
+                        <div class=" d-flex border border-warning p-2 rounded w-50 p-0 justify-content-between">
+                            <p class="m-0 fs-5">mountain.jpg</p>
+                            <p class="m-0 fs-5">❌</p>
+                        </div>
+
+                        <div class=" d-flex border border-warning p-2 rounded w-50 p-0 justify-content-between">
+                            <p class="m-0 fs-5">valley.jpg</p>
+                            <p class="m-0 fs-5">❌</p>
+                        </div>
+
+                        <div class=" d-flex border border-warning p-2 rounded w-50 p-0 justify-content-between">
+                            <p class="m-0 fs-5">coast.jpg</p>
+                            <p class="m-0 fs-5">❌</p>
+                        </div>
+                    </div>
+                    <button class="rounded border-0 bg-info w-10 mt-2" >
+                        <h3 class="mb-0" id="submit-imgs">
+                            Upload Images
+                        </h3>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center flex-column p-2">
+        <div class="d-inline-block border-black border text-center p-2 rounded">
+            <h1>12. Binding"this" Challenge</h1>
+            <button class="bg-warning border-0 rounded fs-4 " style="padding: 2px 50px;" id="btn"><b>click</b></button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+        </script>
+    <script src="./javascriptAd_Folder/jsAdvance.js" type="module"></script>
+
+    <!-- Strict mode = type="module" -->
+    <script src=".//Creating Custom Objects intro/Creating Custom Objects.js" type="module"></script>
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="./Asynchronous JavaScript & APIs/Starting.js" ></script>  -->
+    <!--  Try to remove type="module" -->
+</body>
+
+</html>
+

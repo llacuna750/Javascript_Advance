@@ -1,0 +1,25 @@
+1.1 Function Expressions                        - Different syntax & behaviour
+1.2 Function Expressions Challenge
+2. Arrow Functions                              - Ultra Concise functions
+3. Arrow Functions                              - Ultra Concise functions
+4. Inline Arrow Functions Challenge
+5. Inline Arrow Functions Refactor Challenge    
+6. Default Parameters                           - Catching the rest of the arguments
+7. The Rest Parameter                 
+8. The Rest Parameter Challenge                 - Go to jsAdvance.js file
+9. Callback Functions 
+10. Super Challenge: Real State
+
+
+
+
+
+    
+
+📏 Bootstrap Breakpoints Summary
+Breakpoint	      Abbreviation	            Screen Width (min)	            Common Devices
+sm	                Small	                    ≥ 576px	                    Small phones (landscape)
+md	                Medium	                    ≥ 768px	                    Tablets
+lg	                Large	                    ≥ 992px	                    Laptops
+xl	                Extra Large	                ≥ 1200px                    Desktops
+xxl	                Extra Extra Large	        ≥ 1400px                    Large desktops

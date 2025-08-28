@@ -1,0 +1,83 @@
+1. Ternary Operator
+2. Switch Statement
+3. Object Destructuring
+4. setTimeout
+5. setInterval
+6. Import and Export              (name) - A deeper dive
+7. Import and Export           (default) - A deeper dive
+8.1 Date() Constructors
+8.2 The Error() Constructor
+9. Pre-increment
+10. Numeric Separators & BigInt
+11. Hoisting
+12. Super Challeng: Stock Ticker
+13. for of                                                  - (A nicer way of iterating)
+14. for in
+15.1 .forEach() method                  
+15.2 another feature of .forEach()
+16 .includes()                                              - A method for checking if an array holds a given value?
+17.1 The .map() Method                                      - Iterating Over arrays
+17.2 The .map() Method Challenge                    
+18 The .join() Method                                       - Strings from arrays
+19. The .filter() Method                                    - Getting only the elements we want from an array
+20.1 The .reduce() Method                                   - Give me just one thing
+20.2 The .reduce() Method with Objects                      - Give me just one thing
+21. For loop Break and Continue                             - For Loops Revisted - With break and continue
+22. Various Array Methods                                   - .every()  .some()  .find()  .findIndex()  .indexOf()  .at()
+23. string.replace() and string.replaceAll() method
+24. Regex flags and constructors
+25. Super Challenge: Contact Search
+
+
+
+
+To search for a word in an array of objects (like contacts),
+you can use the following JavaScript array methods depending on your goal:
+----------------------------------------------------------------------------------------
+✅ 1. filter() — to get all matching results
+Use this if you want all objects that contain the word:
+const search = "john";
+const results = contactsArr.filter(contact =>
+  contact.name.toLowerCase().includes(search.toLowerCase())
+);
+    ✅ This checks if contact.name contains "john", case-insensitive.
+
+You can also search across multiple fields:
+const results = contactsArr.filter(contact =>
+  contact.name.toLowerCase().includes(search.toLowerCase()) ||
+  contact.email.toLowerCase().includes(search.toLowerCase()) ||
+  contact.phone.toLowerCase().includes(search.toLowerCase())
+);
+
+----------------------------------------------------------------------------------------
+
+✅ 2. find() — to get the first match only
+const match = contactsArr.find(contact =>
+  contact.name.toLowerCase().includes(search.toLowerCase())
+);
+Returns just one object (the first match), or undefined if none match.
+
+✅ 3. some() — to check if any match exists (returns true/false)
+const exists = contactsArr.some(contact =>
+  contact.name.toLowerCase().includes(search.toLowerCase())
+);
+
+----------------------------------------------------------------------------------------
+✅ 4. Using RegExp (advanced/flexible search)
+const regex = new RegExp(search, "i"); // i = case-insensitive
+
+const results = contactsArr.filter(contact => regex.test(contact.name));
+You can even use it on multiple properties:
+
+const results = contactsArr.filter(contact =>
+  regex.test(contact.name) || regex.test(contact.email)
+);
+----------------------------------------------------------------------------------------
+
+🧠 Summary:
+    Goal	                                Method to Use
+Get all matches	                              filter()
+Get first match only	                      find()
+Check if any match exists                     some()
+Search by word/string                         includes()
+Flexible pattern search                       RegExp Constructor
