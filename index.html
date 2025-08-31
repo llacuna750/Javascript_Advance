@@ -15,7 +15,7 @@
 
     <title>Document</title>
     <link rel="stylesheet" href="jsAdbans.css">
-    <link rel="shortcut icon" href="../images/js-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/js-favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -23,8 +23,8 @@
         <div class="mydiv p-3">
             <h1 id="gwapoq">JQuery <span>
                     <h3 class="thisish3">Vanilla JS</h3>
-                </span></h1>
-        </div>
+                </span></h1>    
+        </div>  
 
         <div class="container q1 p-3">
             <h2>What is the capital of Peru?</h2>
@@ -51,7 +51,11 @@
             <button class="btn btn-warning Logout" id="startShutdownMe">Log out</button>
         </div>
 
-        <div class="jumbotron container bg-primary-text-black p-2">
+        <div class="jumbotron container bg-primary-text-black p-2" id="clicker1" tabindex="0">
+            <div id="hiddendiv">
+                <h3 style="color: blue;"><b>12. Super Challeng: Stock Ticker  ↓</b></h3>
+            </div>
+
             <h1>Name: <span id="name"></span></h1>
             <h1>Symbol: <span id="Symbol"></span></h1>
             <h1>Price:
@@ -61,9 +65,13 @@
             <h1>Time: <span id="Time"></span></h1>
         </div>
 
-        <div class="container bg-danger bg-gradient rounded-2  py-2 pe-lg-5 display-5">
+        <div class="container bg-danger bg-gradient rounded-2  py-2 pe-lg-5 display-5" id="clicker2" tabindex="0">
+            <div id="hiddendiv">
+                <h3 style="color: blue"><b>16 .includes() Method ↓</b></h3>
+            </div>
+            
             <h2 class="text-center text-light">Shopping List📝</h2>
-            <div class="text-sm-center">
+            <div class="text-sm-center" >
                 <div class="d-flex justify-content-center">
                     <ul id="list" class="list-unstyled">
                         <!-- list -->
@@ -81,16 +89,23 @@
             </div>
         </div>
 
-        <div class="container-md bg-success m-2 p-2 w-50 rounded-2 d-block mx-auto" id="playlistSong">
+        <div tabindex="0" class="clicker3 border mt-2 p-0">
+            <div id="hiddendiv" class=" p-0">
+                <h3 style="color: blue;" ><b>.map() VS .forEach()    ↓</b></h3>
+            </div>
+
+            <div class="container-md bg-success m-2 p-2 w-50 rounded-2 d-block mx-auto"  id="playlistSong" >
+            </div>
         </div>
 
-        <div class="container-md bg-primary m-2 p-2 w-75 rounded-2 d-block mx-auto">
+        <div class="container-md bg-primary m-2 p-2 w-75 rounded-2 d-block mx-auto clicker4" tabindex="0">
+            <h3 style="color: rgb(5, 236, 148);" id="hiddendiv"><b>25. Super Challenge: Contact Search   ↓</b></h3>
             <div class="container-md bg-dark py-5 px-4">
                 <form>
                     <div class="d-flex justify-content-center">
                         <div class="p-3">
                             <label for="pattern-search-input" class="form-label mb-0">
-                                <h4 class="mb-0">Enter contact name:</h4>
+                                <h4 class="mb-0">Enter contact name:</h4>   
                             </label>
                         </div>
                     </div>
@@ -123,24 +138,31 @@
             </div>
         </div>
 
-        <div class="container mt-4 border p-2">
+        <div class="container mt-4 border p-2 clicker5" tabindex="0">
+            <h3 style="color: blue;" id="hiddendiv"><b>8. The Rest Parameter Challenge  ↓</b></h3>
             <div class="row g-4" id="contenerSurprise"> <!-- g-4 gives both horizontal & vertical gap -->
             </div>
         </div>
 
-        <div class="container my-3 p-4 containerRealstate" id="containerRealStaet">
-            <!-- <section class="p-0 realStateCont">
-                    <img class="realStateImage" src="/Javascript_Advance/Function Expressions & Parameters/Images/shed.jpg" alt="imagRender">
-                    <div class="card-right">
-                        <h1><b>Kensington, London</b></h1>
-                        <h3><b>£890000</b></h3>
-                        <p>Highly desirable location in stunning scenery!</p>
-                        <h2><b>62 m2</b></h2>
-                    </div>
-                </section>  -->
+        <!-- 10. Super Challenge: Real State -->
+        <div class="clicker5 border mt-2 rounded-2" tabindex="0">
+            <h3 style="color: blue;" id="hiddendiv"><b>10. Super Challenge: Real State ↓</b></h3>
+            <div class="container my-3 p-4 containerRealstate" id="containerRealStaet">
+                <!-- <section class="p-0 realStateCont">
+                                <img class="realStateImage" src="/Javascript_Advance/Function Expressions & Parameters/Images/shed.jpg" alt="imagRender">
+                                <div class="card-right">
+                                    <h1><b>Kensington, London</b></h1>
+                                    <h3><b>£890000</b></h3>
+                                    <p>Highly desirable location in stunning scenery!</p>
+                                    <h2><b>62 m2</b></h2>
+                                </div>
+                            </section>  -->
+            </div>
         </div>
+        
 
-        <div class="container myCatAPi">
+        <div class="container myCatAPi clicker6 mt-2" tabindex="0">
+            <h4 style="color: blue;" id="hiddendiv"><b>6. fetch().then()  ↓</b></h4>
             <div class="row row-cols-1 row-cols-md-2 g-3">
                 <!-- Dog API -->
                 <div class="col">
@@ -179,7 +201,8 @@
 
     <!-- 19. Super challenge: Async Image Load -->
     <div class="container p-3 border-1 border border-black my-2 rounded w-25" id="grandFather-Async-Image-Load">
-        <div class="container" id="img-container">
+        <div class="container clicker7" tabindex="0" id="img-container">
+            <h3 style="color: blue;" id="hiddendiv"><b>19. Super challenge: Async Image Load</b></h3>
             <div class="m-2 d-flex flex-column  justify-content-center align-content-center" id="upload-container">
                 <h5><b>Select Images to Upload</b> </h5>
 
@@ -211,8 +234,8 @@
     </div>
 
     <div class="container d-flex justify-content-center align-items-center flex-column p-2">
-        <div class="d-inline-block border-black border text-center p-2 rounded">
-            <h1>12. Binding"this" Challenge</h1>
+        <div class="d-inline-block border-black border text-center p-2 rounded clicker8" tabindex="0">
+            <h3 style="color: blue;" id="hiddendiv"><b>12. Binding"this" Challenge</b></h3>
             <button class="bg-warning border-0 rounded fs-4 " style="padding: 2px 50px;" id="btn"><b>click</b></button>
         </div>
     </div>

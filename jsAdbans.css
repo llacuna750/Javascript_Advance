@@ -99,7 +99,6 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  border: 1px solid #95c2c2;
   border-radius: 5px;
 }
 .containerRealstate .realStateCont {
@@ -171,4 +170,80 @@ body {
 
 .d-NoneMe {
   display: none;
+}
+
+#clicker1 {
+  outline: none;
+  cursor: pointer;
+}
+
+#hiddendiv {
+  display: none;
+}
+
+#clicker1:focus #hiddendiv {
+  display: block;
+}
+
+#clicker2 {
+  outline: none;
+  cursor: pointer;
+}
+
+#clicker2:focus #hiddendiv {
+  display: block;
+}
+
+.clicker3 {
+  outline: none;
+  cursor: pointer;
+}
+
+.clicker3:focus #hiddendiv {
+  display: block;
+}
+
+.clicker4 {
+  outline: none;
+  cursor: pointer;
+}
+
+.clicker4:focus #hiddendiv {
+  display: block;
+}
+
+.clicker5 {
+  outline: none;
+  cursor: pointer;
+}
+
+.clicker5:focus #hiddendiv {
+  display: block;
+}
+
+.clicker6 {
+  outline: none;
+  cursor: pointer;
+}
+
+.clicker6:focus #hiddendiv {
+  display: block;
+}
+
+.clicker7 {
+  outline: none;
+  cursor: pointer;
+}
+
+.clicker7:focus #hiddendiv {
+  display: block;
+}
+
+.clicker8 {
+  outline: none;
+  cursor: pointer;
+}
+
+.clicker8:focus #hiddendiv {
+  display: block;
 }/*# sourceMappingURL=jsAdbans.css.map */

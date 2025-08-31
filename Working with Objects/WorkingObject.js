@@ -251,7 +251,7 @@ console.log(gabinfo);
 console.table(gabinfo);
 
 /*
-Deep Copy                                               vs                               Shallow Copy
+            Deep Copy                                 vs                               Shallow Copy
 
             Shallow                                                                       Deep
 Create a new object or array,                                           Copies the entire array or Object        

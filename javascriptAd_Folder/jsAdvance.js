@@ -13,8 +13,10 @@ function $(s) {
   return document.querySelector(s);
 }
 
+
+
+/***********************************************/ console.log("\n", spaceMe, "4. setTimeout", spaceMe, "\n"); /*===*=====================================*/
 /* setTimeout() */
-console.log("\n", spaceMe, "4. setTimeout", spaceMe, "\n");
 const myans = $("#myAnswer");
 const seconds = $(`.seconds`);
 let myChoice = $(".choice");
@@ -29,6 +31,8 @@ setTimeout(displayAnswer, 2000, mySagot);
 setTimeout(() => {
   myChoice.style.display = "block";
 }, 3500);
+
+
 
 function displayAnswer(answer) {
   console.log("running...");
@@ -108,8 +112,11 @@ function logAnswer(answer, points) {
   }
 }
 
+
+
+
+/***********************************************/ console.log("\n", spaceMe, "5. setInterval", spaceMe, "\n"); /*===*=====================================*/
 /* setInterval() */
-console.log("\n", spaceMe, "5. setInterval", spaceMe, "\n");
 
 const startShut = document.getElementById("startShutdownMe");
 
@@ -143,8 +150,11 @@ console.log(
   "\nGo to importing.js file"
 );
 
+
+
+
+/***********************************************/ console.log("\n", spaceMe, "12. Super Challeng: Stock Ticker", spaceMe, "\n"); /*===*=====================================*/
 // 12. Super Challeng: Stock Ticker
-console.log("\n", spaceMe, "12. Super Challeng: Stock Ticker", spaceMe, "\n");
 
 setInterval(() => {
   const stockData = getStockData();
@@ -202,6 +212,10 @@ const emojis = ['🦒', '🦁', '🐼'];
 console.log(emojis.includes('🐼')); // return boolean value
 
 
+
+
+/************************************************/console.log("\n\n", spaceMe, "25. Super Challenge: Contact Search", spaceMe, "\n\n");/*=======================********************************/
+
 const shoppingList = []; // Our Container of Shopping List
 console.log(`ShoppingList empty?`, shoppingList.length === 0); // Check if the shoppingList is Empty
 
@@ -251,10 +265,13 @@ function render() {
   1. Array of ShoppingList
   2. onclick (arrow function) Event handler
   3. Render function (that can add Items the ShoppingList)
-  4. 💸) method to identify if the item is already exists. */
+  4. 💸) method to identify if the item is already exists. 
+*/
 
 
-console.log("\n", spaceMe, "16.2 The .map() Method Challenge", spaceMe, "\n");
+
+
+/***********************************************/ console.log("\n", spaceMe, "16.2 The .map() Method Challenge", spaceMe, "\n"); /*===*=====================================*/
 /* Iterating Over arrays */
 
 /* Copy & Paste this one later */
@@ -340,15 +357,16 @@ const playListMapforEach = playlistArr.forEach((playListNako) => { // How about 
 
 
 
-/* we use .join() function because if we add the playlistHtml Array in the innerHTML, 
-it could be print like this ['', '', '' ] in our html page
+/* 
+  we use .join() function because if we add the playlistHtml Array in the innerHTML, 
+  it could be print like this ['', '', '' ] in our html page
 
-What we implemented on making my Playlist web ?
-1. Export / import the the object playlistArr in playlist.js file
-2. Create array called: playlistHTML = []
-3. In making rendering the playlistHTML to our HTML we use:
-- for loop to Iterate over Array of Objects
-- you can also use .map() function to Iterate over Arrays of Objects
+  What we implemented on making my Playlist web ?
+  1. Export / import the the object playlistArr in playlist.js file
+  2. Create array called: playlistHTML = []
+  3. In making rendering the playlistHTML to our HTML we use:
+  - for loop to Iterate over Array of Objects
+  - you can also use .map() function to Iterate over Arrays of Objects
 */
 
 
@@ -378,7 +396,10 @@ document.getElementById(`container).classList.toggle(`hidden`) */
 console.log("\n", spaceMe, "18. The .filter() Method", spaceMe, "\nGo to Importing.js file");
 /* Getting only the elements we want from an array */
 
-/************************************************/console.log("\n", spaceMe, "25. Super Challenge: Contact Search", spaceMe, "\nGo to jsAdvance.js file");/************************************************/
+
+
+
+/************************************************/console.log("\n", spaceMe, "25. Super Challenge: Contact Search", spaceMe, "\nGo to jsAdvance.js file"); /*===*=====================================*/
 import contactsArr from './fileExported_May_you_canUse.js';
 
 console.log(contactsArr);
@@ -537,7 +558,9 @@ function renderContact(conTact) {
 - Object destructuring 
 */
 
-/************************************************/ console.log("\n", spaceMe, "8. The Rest Parameter Challenge", spaceMe, "\n"); /************************************************/
+
+
+/************************************************/ console.log("\n", spaceMe, "8. The Rest Parameter Challenge", spaceMe, "\n"); /*===*=====================================*/
 /* The Rest Parameter Challenge 
 1. Add parameters.
 2. Update the HTML template where you see **NAME** 
@@ -572,10 +595,15 @@ document.getElementById(`contenerSurprise`).innerHTML = getLabelsHtml(
   - .map() method [create new Array]
   - rendering
   - .join() method
+  - ...Rest Parameter
   - dom-access #container (parent) + getLabelsHtml() -> Child
 */
 
-/************************************************/ console.log("\n", spaceMe, "10. Super Challenge: Real State", spaceMe, "\n"); /************************************************/
+
+
+
+
+/************************************************/ console.log("\n", spaceMe, "10. Super Challenge: Real State", spaceMe, "\n"); /*===*=====================================*/
 /*
 SUPER CHALLENGE 💪
 
@@ -700,7 +728,9 @@ document.getElementById("containerRealStaet").innerHTML = getPropertyHtml(
 );
 
 
-/************************************************/ console.log("\n", spaceMe, "6. fetch().then()", spaceMe, "\nGo to jsAdvance.js file"); /************************************************/
+
+
+/************************************************/ console.log("\n", spaceMe, "6. fetch().then()", spaceMe, "\nGo to jsAdvance.js file"); /*===*=====================================*/
 
 fetch(`https://dog.ceo/api/breeds/image/random`)
   .then((response) => {
@@ -763,11 +793,14 @@ fetch(`https://api.thecatapi.com/v1/images/search`)
       document.getElementById("catImageContainer1").appendChild(imageCatElemApi);
     }
   }) // We use curly braces with more complex algorithm or logic
-  .catch((error) => {
-    console.error("Fetch error:", error);
-  });
+.catch((error) => {
+  console.error("Fetch error:", error);
+});
 
-/************************************************/ console.log("\n", spaceMe, "7. fetch().then() Challenge", spaceMe, "Go back to Starting.js file"); /************************************************/
+
+
+
+/************************************************/ console.log("\n", spaceMe, "7. fetch().then() Challenge", spaceMe, "Go back to Starting.js file"); /*===*=====================================*/
 /*  
 Challenge:  
 1. Make a fetch request to the "Bored" API:  
@@ -777,7 +810,9 @@ Challenge:
 2. Log an object containing an activity suggestion to the console:  
    @ hint.md for help!  
 */
-/************************************************/ console.log("\n", spaceMe, "8. Fetching with async/await", spaceMe, "\n"); /************************************************/
+
+
+/************************************************/ console.log("\n", spaceMe, "8. Fetching with async/await", spaceMe, "\n"); /*===*=====================================*/
 /*
 const response = await fetch(`https://api.thecatapi.com/v1/images/search`);
 const data = await response.json();
@@ -807,7 +842,10 @@ async function getDogImage() {
 
 getDogImage();
 
-/************************************************/ console.log("\n", spaceMe, "10. Handling Rejected Promises", spaceMe, ""); /************************************************/
+
+
+
+/************************************************/ console.log("\n", spaceMe, "10. Handling Rejected Promises", spaceMe, ""); /*===*=====================================*/
 const baseUrl = "https://dog.ceo/api/breeds/image/random";
 // try {
 //   fetch(baseUrl)
@@ -820,7 +858,11 @@ const baseUrl = "https://dog.ceo/api/breeds/image/random";
 //   console.log(`The operation completed.`);
 // }
 
-/************************************************/ console.log("\n", spaceMe, "11. response.ok", spaceMe, ""); /************************************************/
+
+
+
+
+/************************************************/ console.log("\n", spaceMe, "11. response.ok", spaceMe, ""); /*===*=====================================*/
 /*
 
 *-------------------------------------------------------------------------------------------------------*
@@ -855,7 +897,11 @@ the execution of the code,                    which might not throw an
     and other unexpected                            failure
         issues
 */
-/************************************************/ console.log("\n", spaceMe, "12. Taking APIs to the Next Level", spaceMe, ""); /************************************************/
+
+
+
+
+/************************************************/ console.log("\n", spaceMe, "12. Taking APIs to the Next Level", spaceMe, ""); /*===*=====================================*/
 /*
 Base URL: https://apis.scrimba.com/jsonplaceholder
 Endpoint: /posts
@@ -863,7 +909,11 @@ Challenge:
 1. Make a fetch request to get all of the available posts.
 Remember to handle all errors!
  */
-/************************************************/ console.log("\n", spaceMe, "15. Working with images asynchronously", spaceMe, ""); /************************************************/
+
+
+
+
+/************************************************/ console.log("\n", spaceMe, "15. Working with images asynchronously", spaceMe, ""); /*===*=====================================*/
 
 /*const image = document.createElement(`img`);
 image.src = "http://gwapoko.com";
@@ -899,7 +949,11 @@ console.log(image);
 image.addEventListener('load', () => console.log("Image has loaded✔✔✔✔✔"));
 image.addEventListener('error', () => console.log("Image has NOT loaded💥💥💥💥💥"));
 
-/************************************************/ console.log("\n", spaceMe, "16. Promise Challenge", spaceMe, ""); /************************************************/
+
+
+
+
+/************************************************/ console.log("\n", spaceMe, "16. Promise Challenge", spaceMe, ""); /*===*=====================================*/
 function preLoadImg(url) {
   return new Promise((resolve, reject) => {
 
@@ -938,7 +992,11 @@ const getPreLoadimg = async () => {
 
 getPreLoadimg();
 
-/************************************************/ console.log("\n", spaceMe, "17. Callback Hell", spaceMe, ""); /************************************************/
+
+
+
+
+/************************************************/ console.log("\n", spaceMe, "17. Callback Hell", spaceMe, ""); /*===*=====================================*/
 /* Callback hell is a situation where 
 mulitple async operations are chained together using nested callbacks, 
 which makes the code difficult to read and maintain.
@@ -988,19 +1046,88 @@ function notifyUser(callback) {
   }, 1000);
 }
 
-uploadFile(processingFile(notifyUser));
+// uploadFile(processingFile(notifyUser)); // Error
 
 // // The pyramid of Doom
-// uploadFile(() => {
-//   processingFile(() => {
-//     notifyUser(() =>
-//       console.log('All steps completed!'));
-//   })
-// });
+uploadFile(() => {
+  processingFile(() => {
+    notifyUser(() =>
+      console.log('All steps completed!'));
+  })
+});
 
-/************************************************/ console.log("\n", spaceMe, "18. Using Promises to escape Callback Hell", spaceMe, "\nGo back to Starting.js file"); /************************************************/
 
-/************************************************/ console.log("\n", spaceMe, "19. Super challenge: Async Image Load", spaceMe, ""); /************************************************/
+
+
+
+/************************************************/ console.log("\n", spaceMe, "18. Using Promises to escape Callback Hell", spaceMe, "\nGo back to Starting.js file"); /*===*=====================================*/
+/*
+function uploadFile() {
+  return new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+      console.log(`Step 1: Uploading file...`);
+
+      resolve(); // call next step after 3 second
+    }, 3000); // log after 3 seconds
+  });
+}
+
+function processFile() {
+  return new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+      console.log(`Step 2 : Processing file..`);
+
+      resolve(); // call next step after 1 second
+    }, 1000);
+  });
+}
+
+function notifyUser() {
+  return new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+      console.log(`Step 3: Notifying user...`);
+
+      resolve(); // call next step after 1 second
+    }, 1000);
+  });
+}
+
+/* uploadFile(processingFile(notifyUser)); 
+  Expected Output:
+
+  Step 1: Uploading file...
+  Step 2: Processing file..
+  Step 3: Notifying user...
+  All steps completed!
+*/
+
+/* Feature:
+  try/catch()
+  new Promise
+  easier to read
+  neat
+  easier to debug
+
+  try {
+    await uploadFile();
+    await processFile();
+    await notifyUser();
+    console.log('All steps completed!');
+  } catch (err) {
+    console.log(err);
+  }
+
+
+*/
+
+
+
+
+
+/************************************************/ console.log("\n", spaceMe, "19. Super challenge: Async Image Load", spaceMe, ""); /*===*=====================================*/
 function getImagePromise(url) {
   return new Promise((resolve, reject) => {
 
@@ -1075,7 +1202,10 @@ What we studied:
 - Promises
 */
 
-/************************************************/ console.log("\n", spaceMe, '12. Binding"this" Challenge', spaceMe, ""); /************************************************/
+
+
+
+/************************************************/ console.log("\n", spaceMe, '12. Binding"this" Challenge', spaceMe, ""); /*===*=====================================*/
 import producto from '../Working with Objects/WorkingObject.js';
 
 const clickBtn = document.getElementById(`btn`);

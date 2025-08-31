@@ -105,7 +105,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    border: 1px solid #95c2c2;
+    // border: 1px solid #95c2c2;
     border-radius: 5px;
 
     .realStateCont {
@@ -201,4 +201,97 @@ body {
 // for section upload-container
 .d-NoneMe {
     display: none;
+}
+
+
+
+// for 12. Super Challeng: Stock Ticker  ↓
+#clicker1 {
+    outline: none;
+    cursor: pointer;
+}
+
+#hiddendiv {
+    display: none;
+}
+
+#clicker1:focus #hiddendiv {
+    display: block;
+}
+
+
+// clicker2 for 16 .includes() Method  ↓
+#clicker2 {
+    outline: none;
+    cursor: pointer;
+}
+
+#clicker2:focus #hiddendiv {
+    display: block;
+}
+
+
+// clicker3 for .map() VS .forEach()   ↓
+.clicker3 {
+    outline: none;
+    cursor: pointer;
+}
+
+.clicker3:focus #hiddendiv {
+    display: block;
+}
+
+
+// clicker4 for 25. Super Challenge: Contact Search   ↓
+.clicker4 {
+    outline: none;
+    cursor: pointer;
+}
+
+.clicker4:focus #hiddendiv {
+    display: block;
+}
+
+
+// clciker5 for 8. The Rest Parameter Challenge  ↓
+.clicker5 {
+    outline: none;
+    cursor: pointer;
+}
+
+.clicker5:focus #hiddendiv {
+    display: block;
+}
+
+
+// clciker6 for 6. fetch() Method & JSON  ↓
+.clicker6 {
+    outline: none;
+    cursor: pointer;
+}
+
+.clicker6:focus #hiddendiv {
+    display: block;
+}
+
+
+
+// clciker7 for 19. Super challenge: Async Image Load
+.clicker7 {
+    outline: none;
+    cursor: pointer;
+}
+
+.clicker7:focus #hiddendiv {
+    display: block;
+}
+
+// clciker8 for 12. Binding"this" Challenge
+.clicker8 {
+    outline: none;
+    cursor: pointer;
+}
+
+.clicker8:focus #hiddendiv {
+    display: block;
 }
