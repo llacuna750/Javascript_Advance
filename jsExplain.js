@@ -159,3 +159,7 @@ function printTriangle(rows) {
 }
 
 printTriangle(5);
+
+
+const name = 'Gabriel llacuna';
+console.log(name.length);
