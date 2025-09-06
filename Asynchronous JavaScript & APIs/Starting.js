@@ -119,7 +119,7 @@ fetch(`https://apis.scrimba.com/bored/api/activity`)
 const getActivityIdea = async () => {
   const response1 = fetch(`https://apis.scrimba.com/bored/api/activity`);
   // const data1 = await response1.json();
-  console.log(`Promises (without await):`, response1);  // try remove await and comment out the data1 & it console first
+  console.log(`Promises (without await):`, (await response1).json);  // try remove await and comment out the data1 & it console first
   // console.log(`\nData:`, data1.activity);  
 }
 getActivityIdea(); // Call the function

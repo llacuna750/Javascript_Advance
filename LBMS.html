@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form-group {
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            /* Vertically aligns items in the center */
+            margin-bottom: 10px;
+            /* Adds space between groups */
+        }
+
+        .form-group #formAction label {
+            flex-basis: 80px;
+            /* Gives labels a fixed width for alignment */
+            margin-right: 10px;
+        }
+
+        .form-group #formAction input {
+            flex-grow: 0;
+            height: 20px;
+            /* Allows inputs to take up remaining space */
+        }
+
+
+        table {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 1px solid;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Library Book Management System</h3>
+
+    <!-- action="./gotoHtml.html" -->
+    <div class="form-group">
+        <form id="formAction" onsubmit="addBook(event)">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" placeholder="Please enter title.." required>
+            
+            <br><br>
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" placeholder="Please enter author.." required>
+        
+            <br><br>
+            <label for="isbn">ISBN</label>
+            <input type="text" name="isbn" id="isbn" placeholder="Please enter valid ISBN.." required>
+        
+            <br><br>
+            <label for="status">Availability</label>
+            <input type="checkbox" name="status" id="status"><span> Default: true (Optional)</span>
+        
+            <br><br>
+            <input type="submit" value="Submit"><span id="isSuccessfullAdd"></span>
+        </form>
+    </div>
+    
+
+
+    <!-- <p>Current Status: <span id="currentStatus"></span></p> -->
+
+
+    <div class="tableData">
+        <table>
+            <thead>
+                <tr>
+                    <th class="dayinmL">LIBRARY BOOK MANAGEMENT SYSTEM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="Library.js" type="module"></script>
+</body>
+
+</html>

@@ -6,13 +6,13 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 2, 5];
 */
 
 
-for (let i=0; i < arr.length; i++) {
+for (let i = 0; i < arr.length; i++) {
     // console.log(arr[i]);
     console.log();
 
-    for (let x=0; x < arr.length; x++) {
+    for (let x = 0; x < arr.length; x++) {
 
-        if (i !== x      &&         x > i - 1        &&     arr[i] === arr[x]) {
+        if (i !== x && x > i - 1 && arr[i] === arr[x]) {
             console.log(`i = ${i} Value: ${arr[i]},           j = ${x} Value: ${arr[x]}`);
         }
     }
@@ -28,16 +28,16 @@ const h = `Hello World!`;
 // With Built-in method
 const splitH = h.split("");
 const reverse = splitH.reverse();
-console.log(`With Built-in method:`,reverse.join(""));
+console.log(`With Built-in method:`, reverse.join(""));
 
 
 // WithOut Built-in method
 let reverseHere = [];
 
 const n = h.length - 1;
-for (let i=n; i >= 0; i--) {
+for (let i = n; i >= 0; i--) {
     reverseHere.push(h[i]);
-} 
+}
 console.log(`With-Out using .split`, reverse);
 console.log(`WithOut Built-in method:`, reverseHere.join(''));
 
@@ -48,9 +48,9 @@ const arrNum = [5, 6, 7, 5, 8, 4, 2, 6];
 function findDuplicate(arr) {
     const result = [];
 
-    for (let i=0; i<arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         // console.log(); // add new line every compete iteration of i
-        for (let j=i+1; j<arr.length; j++) {
+        for (let j = i + 1; j < arr.length; j++) {
             // console.log(`i = ${i} Value: ${arr[i]},           j = ${j} Value: ${arr[j]}`);
 
             if (arr[i] == arr[j]) {
@@ -117,12 +117,12 @@ console.log(space.repeat(3), symbol.repeat(3).split('').join(' '));
 console.log(space.repeat(2), symbol.repeat(4).split('').join(' '));
 console.log(space.repeat(1), symbol.repeat(5).split('').join(' '));
 console.log(space.repeat(0), symbol.repeat(6).split('').join(' '));
-console.log( symbol.repeat(7).split('').join(' '));
+console.log(symbol.repeat(7).split('').join(' '));
 
 for (let i = 0; i < row; i++) {
     // you can use j < i+1
     for (let j = 0; j < z; j++) {
-        
+
         // console.log(`i = ${i}    z = ${z}      j = ${j}`);
         if (z < column) {
             process.stdout.write('* ');
@@ -142,7 +142,7 @@ for (let i = 0; i < thisRow; i++) {
     console.log();
 
     for (let j = 0; j < thisColumn; j++) {
-        
+
         if (j > dividedColumn) {
             // console.log(`i = ${i}       j = ${j}`);
         } else {
@@ -163,3 +163,25 @@ printTriangle(5);
 
 const name = 'Gabriel llacuna';
 console.log(name.length);
+
+
+
+
+const USER_MAP = {
+    1: { name: "Kyle" },
+    2: { name: "Sally" },
+}
+
+console.log(USER_MAP[1]);
+
+
+const userMap = new Map([
+    [1, { name: "Kyle" }],
+    [2, { name: "Sally" }],
+]);
+
+console.log(userMap);
+
+userMap.set({ userId: 1 }, { name: "John" });
+
+console.log(userMap);
