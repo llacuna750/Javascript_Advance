@@ -34,7 +34,7 @@
             border-collapse: collapse;
         }
 
-        th {
+        th,td {
             border: 1px solid;
             padding: 10px 10px;
         }
@@ -73,19 +73,35 @@
 
 
     <div class="tableData">
-        <table>
+        <table id="table">
             <thead>
-                <tr>
-                    <th class="dayinmL">LIBRARY BOOK MANAGEMENT SYSTEM</th>
+                <tr >
+                    <th id="myCell">LIBRARY BOOK MANAGEMENT SYSTEM</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    
+                    <td>Wowow</td>
+                    <td>Wowow</td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    
+    <br><br> <!-- Search  -->
+    <input type="text" name="search" id="search" placeholder="Type to Search..." onkeyup="onSearch()">  
+
+    <!-- List section -->
+    <ul id="list">
+        <li>Maharashta</li>
+        <li>Goa</li>
+        <li>Sikkis</li>
+        <li>Kerala</li>
+        <li>Punjava</li>
+        <li>Youtube</li>
+        <li>Facebook</li>
+    </ul>
 
     <script src="Library.js" type="module"></script>
 </body>

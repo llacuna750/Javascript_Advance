@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Book Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background: #f4f6f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    }
+    input, button, select {
+      padding: 8px;
+      margin: 5px 0;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background: #4CAF50;
+      color: white;
+    }
+    .actions button {
+      margin: 2px;
+      padding: 5px 10px;
+      font-size: 0.9em;
+    }
+    .delete {
+      background: #e74c3c;
+    }
+    .delete:hover {
+      background: #c0392b;
+    }
+    .borrow {
+      background: #3498db;
+    }
+    .borrow:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 Library Book Management System</h1>
+  <div class="container">
+    <h3>Add a Book</h3>
+    <input type="text" id="title" placeholder="Book Title">
+    <input type="text" id="author" placeholder="Author">
+    <input type="number" id="year" placeholder="Year">
+    <button onclick="addBook()">Add Book</button>
+
+    <h3>Search Books</h3>
+    <input type="text" id="search" placeholder="Search by title/author..." onkeyup="renderBooks()">
+
+    <h3>Book List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="bookList"></tbody>
+    </table>
+  </div>
+
+  <script>
+    let books = JSON.parse(localStorage.getItem("books")) || [];
+
+    function saveBooks() {
+      localStorage.setItem("books", JSON.stringify(books));
+    }
+
+    function addBook() {
+      const title = document.getElementById("title").value.trim();
+      const author = document.getElementById("author").value.trim();
+      const year = document.getElementById("year").value.trim();
+
+      if (!title || !author || !year) {
+        alert("Please fill all fields!");
+        return;
+      }
+
+      books.push({
+        id: Date.now(),
+        title,
+        author,
+        year,
+        status: "Available"
+      });
+
+      saveBooks();
+      renderBooks();
+
+      document.getElementById("title").value = "";
+      document.getElementById("author").value = "";
+      document.getElementById("year").value = "";
+    }
+
+    function deleteBook(id) {
+      books = books.filter(book => book.id !== id);
+      saveBooks();
+      renderBooks();
+    }
+
+    function toggleStatus(id) {
+      books = books.map(book => {
+        if (book.id === id) {
+          book.status = (book.status === "Available") ? "Borrowed" : "Available";
+        }
+        return book;
+      });
+      saveBooks();
+      renderBooks();
+    }
+
+    function renderBooks() {
+      const search = document.getElementById("search").value.toLowerCase();
+      const list = document.getElementById("bookList");
+      list.innerHTML = "";
+
+      books
+        .filter(book =>
+          book.title.toLowerCase().includes(search) ||
+          book.author.toLowerCase().includes(search)
+        )
+        .forEach((book, index) => {
+          list.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${book.title}</td>
+              <td>${book.author}</td>
+              <td>${book.year}</td>
+              <td>${book.status}</td>
+              <td class="actions">
+                <button class="borrow" onclick="toggleStatus(${book.id})">
+                  ${book.status === "Available" ? "Borrow" : "Return"}
+                </button>
+                <button class="delete" onclick="deleteBook(${book.id})">Delete</button>
+              </td>
+            </tr>
+          `;
+        });
+    }
+
+    renderBooks();
+
+    console.log(books);
+  </script>
+</body>
+</html>

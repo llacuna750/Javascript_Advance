@@ -37,6 +37,8 @@ class Library {
     }
 }
 
+const book = [];
+
 function addBook(event) {
     event.preventDefault();
 
@@ -61,11 +63,27 @@ function addBook(event) {
 
     book.push(new Libro(title, author, isbn));
 
+    document.getElementById('table').innerHTML += `
+        <tbody>
+            <tr>
+                <td>${title} </td>
+                <td>${author} </td>
+                <td>${isbn} </td>
+                <td>${status.checked} </td>
+            </tr>
+        </tbody>
+    `;
+
     // Show current checkbox state
     // document.getElementById('currentStatus').innerHTML = status.checked;
 
     // Debugging: log values
     console.log({ title, author, isbn, status: status.checked });
+
+    let cellElement = document.getElementById('myCell');
+    let colSpanValue = cellElement.colSpan = 2;
+    console.log(colSpanValue); // Outputs the value of aria-colspan
+
 
     let timeStop = 3;
     
@@ -74,6 +92,8 @@ function addBook(event) {
 
         timeStop--;
     }, 1000);
+
+
 
     // log after 5s
     setTimeout(() => {
@@ -91,14 +111,42 @@ function addBook(event) {
     // });
 }
 
+console.log(window.localStorage);
 
+// let cellElement = document.getElementById('colspanth');
+// cellElement.ariaColSpan = '2';
 
 // var a = [], b = {};
 // a.push(b);
 // console.log(a[0] === b);
 
+const jsonString = '{"name": "Alice", "age": 30, "city": "New York"}';
+
+console.log(jsonString.name);
+
+const javascriptObject = JSON.parse(jsonString);
+
+console.log(jsonString);
+
+console.log(javascriptObject.name); // Output: Alice
+console.log(javascriptObject.age);  // Output: 30
 
 
+
+    
+
+
+window.onSearch = () => {
+    const input = document.querySelector("#search");
+    const filter = input.value.toUpperCase();
+
+    const list = document.querySelectorAll("#list li");
+
+    list.forEach(el => {
+        const text = el.textContent.toUpperCase();
+        el.style.display = text.includes(filter) ? "" : "none";
+    });
+}
 
 // Make it globally available
 window.addBook = addBook;
